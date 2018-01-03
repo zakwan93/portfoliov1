@@ -9,8 +9,18 @@ document.getElementById('emailme').addEventListener('click',function(){
 
 })
 
-document.getElementById('switch1').addEventListener('click',function(){
 
- var element = document.getElementsByClassName("night");
-   element.classList.toggle("body.night");
+$('#switch1').on('click', function(){
+	$('body').toggleClass('night')
 })
+
+$(document).ready(function(){
+	var d = new Date();
+	var n = d.getHours();
+	if (n > 19 || n < 6)
+	  // If time is after 7PM or before 6AM, apply night theme to ‘body’
+	  document.body.className = "night";
+	else
+	  // Else use ‘day’ theme
+	  document.body.className = "";
+});

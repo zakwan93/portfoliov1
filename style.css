@@ -8,6 +8,12 @@ body, html{
     display: block;
 }
 
+
+body.night, html.night {
+    background-color: #131417;
+    color: #afafbf;
+}
+
 h1 h2 h3 p div{
 	display: block;
 }
@@ -128,6 +134,11 @@ section{
 
 .switch-wrapper .moon {
     background: url(moon.png) no-repeat center;
+    background-size: 100%;
+}
+
+body.night .switch-wrapper .moon, html.night .switch-wrapper .moon {
+    background: url(white.svg) no-repeat center;
     background-size: 100%;
 }
 
@@ -512,6 +523,14 @@ body #top-button img, html #top-button img {
     border: 1px solid #007bff;
     background: 0 0;
 }
+
+body.night .experience .job_time, body.night .footer_copyright, body.night .intro, body.night .skills .skillz_category_label, body.night .status, body.night a, body.night strong, html.night .experience .job_time, html.night .footer_copyright, html.night .intro, html.night .skills .skillz_ctegory_label, html.night .status, html.night a, html.night strong {
+    color: #e7e7e7;
+}
+
+
+
+
 
 @keyframes wave{
     0% {transform: rotate(0deg);}
