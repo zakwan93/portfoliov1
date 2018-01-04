@@ -24,3 +24,40 @@ $(document).ready(function(){
 	  // Else use ‘day’ theme
 	  document.body.className = "";
 });
+
+
+$(window).scroll(function(){
+  var threshold = 200; // number of pixels before bottom of page that you want to start fading
+  var op = (($(document).height() - $(window).height()) - $(window).scrollTop()) / threshold;
+	if( op <= 12 ){
+		$("#top-button").show();
+	} else {
+		$("#top-button").hide();
+	}
+});
+
+$(window).on("load",function() {
+  $(window).scroll(function() {
+    var windowBottom = $(this).scrollTop() + $(this).innerHeight();
+    $("section").each(function() {
+      /* Check the location of each desired element */
+      var objectBottom = $(this).offset().top + $(this).outerHeight();
+      
+      /* If the element is completely within bounds of the window, fade it in */
+      if (objectBottom < windowBottom) { //object comes into view (scrolling down)
+        if ($(this).css("opacity")==0) {$(this).fadeTo(200,1);}
+      } else { //object goes out of view (scrolling up)
+        if ($(this).css("opacity")==1) {$(this).fadeTo(250,0);}
+      }
+    });
+  }).scroll(); //invoke scroll-handler on page-load
+});
+
+
+
+
+
+// AOS.init({
+//   duration: 1200,
+// })
+

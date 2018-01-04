@@ -173,7 +173,7 @@ body.night .switch-wrapper .moon, html.night .switch-wrapper .moon {
 
 .intro_hello .wave-hand.animated:hover {
     position: relative;
-    animation: wave 2.0s linear;
+    animation: wave infinite linear;
 }
 
 .intro_hello .wave-hand{
@@ -466,9 +466,7 @@ body #top-button, html #top-button {
     right: 10px;
     cursor: pointer;
     display: none;
-    -webkit-animation: fadeinout 10s linear;
-    animation: fadeinout 10s linear;
-
+    
 }
 
 body #top-button img, html #top-button img {
@@ -544,18 +542,22 @@ body.night .experience .job_time, body.night .footer_copyright, body.night .intr
     80%{transform: rotate(15deg);}
     /*90% {transform: rotate(90deg);}*/
     100% {transform: rotate(0deg);}
-
-
 }
 
-@keyframes fadeinout {
-  0%,50% { opacity: 0; }
-  60% { opacity: 0.2; }
-  70% { opacity: 0.4; }
-  80% { opacity: 0.6; }
-  90% { opacity: 0.8; }
-  100% { opacity: 1; }
+@-webkit-keyframes wave{
+    0% {transform: rotate(0deg);}
+    /*10%{transform: rotate(90deg);}*/
+    20% {transform: rotate(90deg);}  
+    /*30%{transform: rotate(90deg);}*/
+    40% {transform: rotate(15deg);}
+    /*50% {transform: rotate(90deg);}*/
+    60% {transform: rotate(90deg);}
+    /*70%{transform: rotate(90deg);}*/
+    80%{transform: rotate(15deg);}
+    /*90% {transform: rotate(90deg);}*/
+    100% {transform: rotate(0deg);}
 }
+
 
 @keyframes pulsate {
       0% {
