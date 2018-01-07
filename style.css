@@ -124,7 +124,7 @@ section{
 }
 
 .switch-wrapper .toggle-wrapper input:checked + label:after {
-    left: calc(100% - 5px);
+    left: calc(100% - 2px);
     transform: translateX(-100%);
 }
 
@@ -138,7 +138,7 @@ section{
 }
 
 body.night .switch-wrapper .moon, html.night .switch-wrapper .moon {
-    background: url(white.svg) no-repeat center;
+    background: url(whitemoon.png) no-repeat center;
     background-size: 100%;
 }
 
