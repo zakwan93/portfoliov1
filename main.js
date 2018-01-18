@@ -58,9 +58,3 @@ $(window).scroll(function(){
 
 
 
-
-
-AOS.init({
-  duration: 1200,
-})
-
