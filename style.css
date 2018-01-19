@@ -18,11 +18,34 @@ body.night, html.night
                             scroll-behavior: smooth;
                         }
 
-h1 h2 h3 p div
-{
-	display: block;
-}
 
+h1 {
+    display: block;
+    font-size: 2em;
+    -webkit-margin-before: 0.67em;
+    -webkit-margin-after: 0.67em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+h2 {
+    display: block;
+    font-size: 1.5em;
+    -webkit-margin-before: 0.83em;
+    -webkit-margin-after: 0.83em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+h3 {
+    display: block;
+    font-size: 1.17em;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
 body a, html a {
     text-decoration: none;
     font-weight: 900;
@@ -48,14 +71,7 @@ body .emoji, html .emoji {
     background-position: center;
     }
 
-section
-{
-    padding: 120px 60px;
-    display: flex;
-    justify-content: space-around;
-    max-width: 1440px;
-    margin: 0 auto;
-}
+
 .switch-wrapper 
                 {
                     display: -webkit-box;
@@ -183,9 +199,11 @@ body.night .switch-wrapper .moon, html.night .switch-wrapper .moon
 
 .intro_hello{
 	font-weight: 300;
+    
+}
+.intro_hello, .intro_tagline {
     font-size: 2.5rem;
 }
-
 
 .intro_hello .wave-hand.animated{
     position: relative;
@@ -212,7 +230,7 @@ body.night .switch-wrapper .moon, html.night .switch-wrapper .moon
 .intro_tagline {
     font-weight: 300;
     max-width: 700px;
-    font-size: 2.5rem;
+    
 }
 
 
@@ -310,16 +328,15 @@ body.night .switch-wrapper .moon, html.night .switch-wrapper .moon
     margin-left: 15px;
 }
 
-section .background{
-    visibility: visible;  
-    -webkit-transform: translateY(0) scale(1); 
-    opacity: 1;
-    transform: translateY(0) scale(1); 
-    opacity: 1;
-    -webkit-transition: -webkit-transform 0.6s cubic-bezier(.694,0,.335,1) 0s, 
-    opacity 0.6s cubic-bezier(.694,0,.335,1) 0s; 
-    transition: transform 0.6s cubic-bezier(.694,0,.335,1) 0s, 
-    opacity 0.6s cubic-bezier(.694,0,.335,1) 0s;
+body .section, html .section 
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 100px 170px;
 }
 
 body .section_title, html .section_title {
@@ -682,26 +699,72 @@ body.night .experience .job_time, body.night .footer_copyright, body.night .intr
       }
     }
 
-@media screen and (max-width: 480px)
+
+@media screen and (max-width: 330px)
 {
-    .switch-wrapper{
-        top: 10px;
-        right: 20px;
+   
+    .intro_hello, .intro_tagline 
+    {
+        font-size: 1.4rem;
     }
 }
 
+
 @media screen and (max-width: 480px)
 {
-    .intro {
-        padding: 70px 50px;
+    .switch-wrapper
+        {
+            top: 10px;
+            right: 20px;
+        }
+    body .intro 
+        {
+            padding: 100px 35px;
+            line-height: 1.5;
+        }
+    body .section, html .section 
+        {
+            padding: 80px 55px;
+
+        }
+    body .section_content, html .section_content 
+    {
+        padding-left: 30px;
     }
+    .experience .job .time-place 
+    {
+        display: block;
+    }
+    .experience .job__time 
+    {
+        font-size: .8rem;
+    }
+    .footer 
+    {
+        padding: 50px 30px;
+    }
+    body #top-button, html #top-button 
+    {
+        bottom: 15px;
+        right: 3px;
+    }
+
 }
 
 
 @media screen and (max-width: 550px)
 {
-    .intro {
+    .intro 
+    {
         padding: 120px 50px;
+    }
+    .intro_hello, .intro_tagline 
+    {
+        font-size: 1.75rem;
+    }
+    .intro_contact 
+    {
+        font-size: 1rem;
     }
 }
 
@@ -710,276 +773,144 @@ body.night .experience .job_time, body.night .footer_copyright, body.night .intr
     .intro {
         padding: 120px 70px;
     }
-}
-
-
-@media screen and (max-width: 330px)
-{
-    .intro_hello, .intro_tagline {
-    font-size: 1.4rem;
+    .skills .skillz 
+    {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     }
-}
-
-
-@media screen and (max-width: 550px)
-{
-    .intro_hello, .intro_tagline {
-    font-size: 1.75rem;
+     .skills .skillz_category
+    {
+        width: 47%;
+        margin-right: 5px;
+        margin-bottom: 25px;  
+    }
+    .footer 
+    {
+        display: block;
+    }
+    .footer_copyright 
+    {
+        width: auto;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    .footer_links 
+    {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
     }
 }
 
 
 @media screen and (max-width: 768px)
 {
-    .intro_hello, .intro_tagline {
+    .intro_hello, .intro_tagline 
+    {
         font-size: 2rem;
     }
 
-}
-
-
-@media screen and (max-width: 1024px)
-{
-    .intro_hello, .intro_tagline {
-        font-size: 2.25rem;
-    }
-}
-
-
-@media screen and (max-width: 768px)
-{
-    .intro_hello .emoji, .intro_tagline .emoji {
+    .intro_hello .emoji, .intro_tagline .emoji 
+    {
         width: 30px;
         height: 30px;
     }
+    body .section, html .section 
+    {
+        display: block;
+    }
+    body .section_title, html .section_title 
+    {
+        text-align: left;
+        width: auto;
+    }
+    body .section_content, html .section_content 
+    {
+        padding-top: 30px;
+        padding-left: 50px;
+    }
+    .featured-projects .project 
+    {
+        width: 100%;
+        display: block;
+        margin-bottom: 70px;
+    }
+    .featured-projects .project_caption 
+    {
+        width: 100%;
+        margin-top: 25px;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 850px)
+{
+    body .section_title, html .section_title 
+    {
+        width: 150px;
+    }
+    .footer_links a .text 
+    {
+        display: none;
+    }
+    .footer_links img 
+    {
+        display: inline-block;
+    }
 }
 
 
 @media screen and (max-width: 1024px)
 {
-    .intro_hello .emoji, .intro_tagline .emoji {
+    .intro_hello, .intro_tagline 
+    {
+        font-size: 2.25rem;
+    }
+     .intro_hello .emoji, .intro_tagline .emoji 
+     {
         width: 35px;
         height: 35px;
     }
-}
 
-@media screen and (max-width: 550px)
-{
-    .intro_contact {
-    font-size: 1rem;
-    }
-}
-
-@media screen and (max-width: 480px)
-{
-    body .section, html .section {
-    padding: 50px 35px;
-    }
-}
-
-@media screen and (max-width: 768px)
-{
-    body .section, html .section {
-    display: block;
-    }
-
-}
-
-
-@media screen and (max-width: 1024px)
-{
-    body .section, html .section {
+    body .section, html .section 
+    {
         padding: 50px;
     }
+    body .section_title, html .section_title 
+    {
+        margin-right: 50px;
+    }
+    .featured-projects .project 
+    {
+        width: 105%;
+    }
+    .footer 
+    {
+        padding: 50px;
+    }
+    body #top-button, html #top-button 
+    {
+        bottom: 20px;
+        right: 7px;
+        width: 35px;
+    }
 }
+
 
 @media screen and (max-width: 1280px)
 {
     body .section, html .section {
         padding: 100px;
     }
-}
-
-@media screen and (max-width: 768px)
-{
-    body .section_title, html .section_title {
-        text-align: left;
-        width: auto;
-    }
-}
-
-
-@media screen and (max-width: 850px)
-{
-    body .section_title, html .section_title {
-    width: 150px;
-    }
-}
-
-
-@media screen and (max-width: 1024px)
-{
-    body .section_title, html .section_title {
-    margin-right: 50px;
-    }
-}
-
-
-@media screen and (max-width: 480px)
-{
-    body .section_content, html .section_content {
-    padding-left: 30px;
-    }
-}
-
-@media screen and (max-width: 768px)
-{
-    body .section_content, html .section_content {
-    padding-top: 30px;
-    padding-left: 50px;
-    }
-}
-
-
-@media screen and (max-width: 768px)
-{
-    .featured-projects .project {
-    width: 100%;
-    display: block;
-    margin-bottom: 70px;
-    }
-}
-
-
-@media screen and (max-width: 1024px)
-{
-    .featured-projects .project {
-    width: 105%;
-    }
-}
-
-
-@media screen and (max-width: 1280px)
-{
-    .featured-projects .project {
-    width: 115%;
-    }
-}
-
-@media screen and (max-width: 768px)
-{
-    .featured-projects .project_caption {
-    width: 100%;
-    margin-top: 25px;
-    margin-left: 0;
-    }
-}
-
-
-@media screen and (max-width: 630px)
-{
-    .skills .skillz {
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    }
-}
-
-
-@media screen and (max-width: 630px)
-{
-    .skills .skillz_category
+    .featured-projects .project 
     {
-        width: 47%;
-        margin-right: 5px;
-        margin-bottom: 25px;
-       
+        width: 115%;
     }
-}
-@media screen and (max-width: 480px)
-{
-    .experience .job .time-place {
-    display: block;
-    }
-}
-@media screen and (max-width: 480px)
-{
-    .experience .job__time {
-    font-size: .8rem;
-    }
-}
-
-@media screen and (max-width: 480px)
-{
-    .footer {
-    padding: 50px 30px;
-}
-}
-@media screen and (max-width: 630px)
-{
-    .footer {
-    display: block;
-    }
-}
-@media screen and (max-width: 1024px)
-{
-    .footer {
-    padding: 50px;
-    }
-}
-@media screen and (max-width: 630px)
-{
-    .footer_copyright {
-    width: auto;
-    text-align: center;
-    margin-bottom: 25px;
-}
-}
-@media screen and (max-width: 630px)
-{
-    .footer_links {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    }
-}
-
-@media screen and (max-width: 480px)
-{
-    body #top-button, html #top-button {
-    bottom: 15px;
-    right: 3px;
-    }
-}
-@media screen and (max-width: 1024px)
-{
-    body #top-button, html #top-button {
-    bottom: 20px;
-    right: 7px;
-    width: 35px;
-    }
-}
-@media screen and (max-width: 850px)
-{
-    .footer_links a .text {
-    display: none;
-    }
-}
-
-@media screen and (max-width: 850px)
-{
-    .footer_links img {
-    display: inline-block;
-    }
-}
-
-
-
-@media screen and (max-width: 1280px){
-    body .section, html .section {
-        
+    body .section, html .section 
+    {    
         padding: 100px;
     }
 }
