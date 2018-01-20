@@ -389,13 +389,13 @@ section .skills{
     font-weight: 800;
     color: #36363c;
     text-transform: uppercase;
-    overflow: hidden;
+    
 }
 
 .skills .skillz_category_item {
     margin: 3px 0;
     font-size: .9rem;
-    overflow: hidden;
+   
 }
 .section .featured-projects{
    visibility: visible;  
@@ -700,17 +700,22 @@ body.night .experience .job_time, body.night .footer_copyright, body.night .intr
     }
 
 
-@media screen and (max-width: 330px)
+@media screen and (max-width: 320px)
 {
    
     .intro_hello, .intro_tagline 
     {
         font-size: 1.4rem;
     }
+    body .intro 
+        {
+            padding: 130px 45px;
+            
+        }
 }
 
 
-@media screen and (max-width: 480px)
+@media screen and (max-width: 425px)
 {
     .switch-wrapper
         {
@@ -722,20 +727,20 @@ body.night .experience .job_time, body.night .footer_copyright, body.night .intr
             padding: 100px 35px;
             line-height: 1.5;
         }
-    body .section, html .section 
+    body section, html section 
         {
             padding: 80px 55px;
 
         }
     body .section_content, html .section_content 
     {
-        padding-left: 30px;
+        padding-left: 10px;
     }
     .experience .job .time-place 
     {
         display: block;
     }
-    .experience .job__time 
+    .experience .job_time 
     {
         font-size: .8rem;
     }
@@ -747,6 +752,9 @@ body.night .experience .job_time, body.night .footer_copyright, body.night .intr
     {
         bottom: 15px;
         right: 3px;
+    }
+    .status_message{
+        font-size: 1rem;
     }
 
 }
@@ -770,9 +778,7 @@ body.night .experience .job_time, body.night .footer_copyright, body.night .intr
 
 @media screen and (max-width: 630px)
 {
-    .intro {
-        padding: 120px 70px;
-    }
+   
     .skills .skillz 
     {
         -ms-flex-wrap: wrap;
@@ -808,16 +814,7 @@ body.night .experience .job_time, body.night .footer_copyright, body.night .intr
 
 @media screen and (max-width: 768px)
 {
-    .intro_hello, .intro_tagline 
-    {
-        font-size: 2rem;
-    }
-
-    .intro_hello .emoji, .intro_tagline .emoji 
-    {
-        width: 30px;
-        height: 30px;
-    }
+    
     body .section, html .section 
     {
         display: block;
@@ -865,15 +862,7 @@ body.night .experience .job_time, body.night .footer_copyright, body.night .intr
 
 @media screen and (max-width: 1024px)
 {
-    .intro_hello, .intro_tagline 
-    {
-        font-size: 2.25rem;
-    }
-     .intro_hello .emoji, .intro_tagline .emoji 
-     {
-        width: 35px;
-        height: 35px;
-    }
+   
 
     body .section, html .section 
     {
@@ -902,15 +891,19 @@ body.night .experience .job_time, body.night .footer_copyright, body.night .intr
 
 @media screen and (max-width: 1280px)
 {
-    body .section, html .section {
-        padding: 100px;
-    }
     .featured-projects .project 
     {
         width: 115%;
     }
     body .section, html .section 
     {    
-        padding: 100px;
+        margin-right: 20px;
+        margin-left: 0px;
+        padding-left: 20px;
     }
+    body .intro 
+        {
+            padding: 100px 35px;
+            line-height: 1.5;
+        }
 }
