@@ -413,9 +413,10 @@ section .skills{
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-bottom: 100px;
-    margin-left: -5%;
+    margin-bottom: 30px;
+    /*margin-left: -5%;*/
     width: 125%;
+    position: relative;
 }
 
 .featured-projects .project_pic {
@@ -444,9 +445,26 @@ section .skills{
     line-height: 1.3;
 }
 
-.featured-projects .project.micro-blog {
-    margin-bottom: 70px;
+.featured-projects .featured-projects-content p {
+    /* font-size: .85rem; */
+    line-height: 1.3;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
 }
+
+.featured-projects .project_used_item {
+    display: inline-block;
+    margin: 3px 3px 3px 0;
+    font-family: Inconsolata,monospace;
+    font-size: .75rem;
+    font-weight: 400;
+    padding: 2px 7px;
+    border-radius: 3px;
+    color: #007bff;
+    border: 1px solid #007bff;
+    background: 0 0;
+}
+
 
 .featured-projects .project_pic {
     max-width: 700px;
@@ -479,14 +497,12 @@ section .skills{
     margin-bottom: 25px;
 }
 .experience .job .time-place {
-
     display: flex;
     justify-content: space-between;
 }
 
  a.experience .job .job_company {
     font-weight: 500;
-
 }
 
 .experience .job_time {
@@ -514,6 +530,53 @@ section .skills{
     width: 20px;
     height: 20px;
 }
+
+.featured-projects .project_pic img {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    vertical-align: bottom;
+    display: block;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.featured-projects .project_pic:hover img {
+  opacity: 0.3;
+}
+
+.featured-projects .project_pic:hover .middle {
+  opacity: 1;
+}
+
+.featured-projects .middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.featured-projects .text {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+.featured-projects .project_name a {
+    font-weight: 700;
+}
+
+.featured-projects .project p {
+    font-size: .95rem;
+    line-height: 1.5;
+}
+
 body .arrow-link, html .arrow-link {
     font-weight: 700;
     display: inline-block;
@@ -734,7 +797,7 @@ body.night .experience .job_time, body.night .footer_copyright, body.night .intr
         }
     body .section_content, html .section_content 
     {
-        padding-left: 10px;
+        padding-left: 30px;
     }
     .experience .job .time-place 
     {
@@ -831,7 +894,7 @@ body.night .experience .job_time, body.night .footer_copyright, body.night .intr
     }
     .featured-projects .project 
     {
-        width: 100%;
+        width: 80%;
         display: block;
         margin-bottom: 70px;
     }
@@ -845,10 +908,7 @@ body.night .experience .job_time, body.night .footer_copyright, body.night .intr
 
 @media screen and (max-width: 850px)
 {
-    body .section_title, html .section_title 
-    {
-        width: 150px;
-    }
+   
     .footer_links a .text 
     {
         display: none;
@@ -876,6 +936,14 @@ body.night .experience .job_time, body.night .footer_copyright, body.night .intr
     {
         width: 105%;
     }
+    .featured-projects .project_pic:hover img {
+  opacity: 0.3;
+}
+
+.featured-projects .project_pic:hover .middle {
+  opacity: 1;
+}
+
     .footer 
     {
         padding: 50px;
@@ -891,10 +959,7 @@ body.night .experience .job_time, body.night .footer_copyright, body.night .intr
 
 @media screen and (max-width: 1280px)
 {
-    .featured-projects .project 
-    {
-        width: 115%;
-    }
+    
     body .section, html .section 
     {    
         margin-right: 20px;

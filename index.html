@@ -15,6 +15,12 @@
 <div id = "site">
 
 	<div class="switch-wrapper"> 
+		<!-- <a style="margin-right: 30px;" href="contactme.html" target="_blank" title="Contactme"> 
+
+			Contact Me!
+		
+		 -->
+		</a>
 		<div class="sun"></div> 
 		<div class="toggle-wrapper">
 			<input type="checkbox" id="switch"  />
@@ -32,7 +38,7 @@
 			I'm
 			<span class="name"><b>Zakwan Bhaiyat</b></span>
 			, a design-minded front-end and back-end web developer focused on building beautiful interfaces & experiences 
-			<span class="emoji technologist"></span>
+			<span id="emojiwavehand" class="emoji technologist"></span>
 		</h2>
 		<h3 class="intro_contact">
 			<span>Get in touch</span>
@@ -119,7 +125,6 @@
 					<ul>
 						<li class="skillz_category_item">Subline Text</li>
 						<li class="skillz_category_item">Postgres</li>
-						<li class="skillz_category_item">Postico</li>
 						<li class="skillz_category_item">Sqlite3</li>
 						<li class="skillz_category_item">Git & Github</li>
 						<li class="skillz_category_item">Code Pen</li>
@@ -183,33 +188,89 @@
 		</div>
 	</section>
 
-	<section class="section other-projects">
-		<div class="section_title">Projects</div>
-			<div class="section_content">
-				<div class="project"> 
+
+	<section class="section featured-projects"> 
+    	<div class="section_title">Recent Project</div> 
+      		<div class="section_content">
+        		<div class="project resumegenius">
+          			<figure class="project_pic"> 
+            			<a href="https://desolate-chamber-55513.herokuapp.com/users/sign_up" target="_blank">
+              				<img src="resumegenius.png" alt="">
+              					<div class="middle">
+                					<div class="text">Click to Open</div>
+              					</div>
+            			</a> 
+          			</figure>
+        		</div> 
+					
 					<div class="project_name">
-						<!-- <a href="#" target="_blank" class="arrow-link">PayTooth App</a> -->
-						<a> SalZak Shipment Service </a>
+						<a href="https://desolate-chamber-55513.herokuapp.com/users/sign_up" target="_blank"> Resume Genius! </a>
+					</div>
+					<div class = "featured-projects-content"> 
+						<p>Resume builder helps you to create your resume and download as a PDF file into your local system.</p>
+						<p>Apply <strong>Wicked Pdf</strong> gem for download your resume into your local system. </p>
+						<p>Make use of <strong>WKhtmltopdf Binary</strong> gem to convert html page into pdf file.</p>
+						<p>Executed new framework called <strong> Uikit</strong> for design the whole app.
+						<p>Add a different <strong>Validation</strong> whenever necessary.</p>
+						<p>Implemented <strong>Formspree</strong> for get a review from the user.</p>
+						<p>Use <strong>UJS</strong> for Delete method.</p>
+					</div>
+					<div class="project_used">
+						<span class="project_used_item">RAILS</span>
+						<span class="project_used_item">RUBY</span>
+						<span class="project_used_item">JQUERY</span>
+						<span class="project_used_item">Uikit</span>  
+						<span class="project_used_item">POSTGRES</span>
+						<span class="project_used_item">CSS3</span>
+						<span class="project_used_item">HTML5</span>
+						<span class="project_used_item">HEROKU</span>
 					</div> 
-					<p>Design a Rails application for shippers to help them organize all of the ships in their fleet, with a user login system using Devise.</p>
-					<p>Use Paperclip for upload a picture from your local machine and add into your database. </p>
-					<p>The application allowed user to do it’s most basic CRUD function plus, user can remove the account from database too.</p>
-					<p>Add a different Validation for each field. </p>
-					<p>Use UJS for Delete method.</p>
+
+					<br><br><br>
+
+				<div class="project salzakshipment">
+					<figure class="project_pic"> 
+						<a href="https://sal-zakshipment.herokuapp.com/" target="_blank">
+							<img src="salzakshipment.png" alt="">
+							<div class="middle">
+                					<div class="text">Click to Open</div>
+              					</div>
+						</a> 
+					</figure> 
+				</div><br>
+				<div class="project_name">
+						<a href="https://sal-zakshipment.herokuapp.com/" target="_blank"> SalZak Shipment Service </a>
+					</div>
+				<div class = "featured-projects-content"> 
+					<p>Design a Rails application for shippers to help them organize all of the ships in their fleet, with a user login system using <strong>Devise</strong> Gem.</p>
+					<p>Use <strong>Paperclip</strong> gem for upload a picture from your local machine. </p>
+					<p>Application allowed user to do it’s most basic CRUD function plus, user can remove the account from database too.</p>
+					<p>Add a different <strong>Validation</strong> for each field. </p>
+					<p>Use <strong>UJS</strong> for Delete method.</p>
+				</div>
 					<div class="project_used">
 						<span class="project_used_item">RAILS</span>
 						<span class="project_used_item">RUBY</span>
 						<span class="project_used_item">JQUERY</span>
 						<span class="project_used_item">BOOTSTAP</span>  
 						<span class="project_used_item">POSTGRES</span>
-						<span class="project_used_item">CSS</span>
-						<span class="project_used_item">HTML</span> 
+						<span class="project_used_item">CSS3</span>
+						<span class="project_used_item">HTML5</span> 
+						<span class="project_used_item">HEROKU</span>
 					</div> 
-				</div>
+
+			</div>
+	</section>
+
+
+	<section class="section other-projects">
+		<div class="section_title">Projects</div>
+			<div class="section_content">
+				
 				<div class="project"> 
 					<div class="project_name">
 						<!-- <a href="#" target="_blank" class="arrow-link">PayTooth App</a> -->
-						<a> MusicBand.IO </a>
+						<a href="https://github.com/zakwan93/band" target="_blank"> MusicBand.IO </a>
 					</div> 
 					<p>Build a Rails application for Musician to help them organize all of the music event and keep track of it.</p>
 					<p>Set the relationship for each model. </p>
@@ -228,7 +289,7 @@
 				<div class="project"> 
 					<div class="project_name">
 						<!-- <a href="#" target="_blank" class="arrow-link">PayTooth App</a> -->
-						<a> Sinatra Blogging Application </a>
+						<a href="https://github.com/zakwan93/mini-blog-app" target="_blank"> Sinatra Blogging Application </a>
 					</div> 
 					<p>Built an app that allow authenticate user to post their own blog. </p>
 					<p>User can SignUp, SignIn, Sign out, Edit and Delete their account. </p>
@@ -246,7 +307,7 @@
 				<div class="project"> 
 					<div class="project_name">
 						<!-- <a href="#" target="_blank" class="arrow-link">PayTooth App</a> -->
-						<a> HappyHours </a>
+						<a href="https://github.com/zakwan93/HappyHours" target="_blank"> HappyHours </a>
 					</div> 
 					<p>Design a Rails application which keep track of current active attendee for happy hours.</p>
 					<p>User can Add new attendee plus Update the active attendee details. </p>
@@ -262,9 +323,12 @@
 				<div class="project"> 
 					<div class="project_name">
 						<!-- <a href="#" target="_blank" class="arrow-link">PayTooth App</a> -->
-						<a> Tic Tac Toe Game  </a>
+						<a href="https://github.com/zakwan93/tictactoe" target="_blank"> Tic Tac Toe Game  </a>
 					</div> 
-					<p>A single page app that allows the two players to play a simple game of Tic-Tac-Toe. </p>
+					<p>Two players playable tic-tac-toe game.</p>
+					<p>Allowing user to choose who becomes O or X.</p>
+					<p>Winner announcement and a choice to play again or quit.</p>
+					<p>Randomly choosing who starts the game first.</p>
 					<div class="project_used"> 
 						<span class="project_used_item">JAVASCRIPT</span>  
 						<span class="project_used_item">CSS</span>
@@ -368,6 +432,7 @@
 				</span> 
 				<img src="instagram.svg" alt="instagram">
 			</a>
+
 		</div>
  	</footer>
 	<button id="top-button" style="display: inline-block;"> 
