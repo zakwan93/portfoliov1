@@ -30,7 +30,7 @@ h1 {
 }
 h2 {
     display: block;
-    font-size: 1.5em;
+    font-size: 1.2em;
     -webkit-margin-before: 0.83em;
     -webkit-margin-after: 0.83em;
     -webkit-margin-start: 0px;
@@ -71,6 +71,26 @@ body .emoji, html .emoji {
     background-position: center;
     }
 
+section{
+    opacity: 0;
+}
+
+section.fadeIn{
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+
+  /* keyframes must have at least two intervals from/to or 0%/100% */
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 
 .switch-wrapper 
                 {
@@ -83,19 +103,19 @@ body .emoji, html .emoji {
                     -webkit-box-align: center;
                     -ms-flex-align: center;
                     align-items: center;
-                    position: absolute;
+                    position: fixed;
                     top: 20px;
                     right: 30px;
                 }
 
 .switch-wrapper .sun {
-                        background: url(white_sun_with_rays.png) no-repeat center;
+                        background: url(images/white_sun_with_rays.png) no-repeat center;
                         background-size: 100%;
                     }
 
 body.night .switch-wrapper .sun , html.night .switch-wrapper .sun
                     {
-                        background: url(sun-white.svg) no-repeat center;
+                        background: url(images/sun-white.svg) no-repeat center;
                         background-size: 100%;
                     }
 
@@ -168,13 +188,13 @@ body.night .switch-wrapper .sun , html.night .switch-wrapper .sun
 
 .switch-wrapper .moon
                     {
-                        background: url(moon.png) no-repeat center;
+                        background: url(images/moon.png) no-repeat center;
                         background-size: 100%;
                     }
 
 body.night .switch-wrapper .moon, html.night .switch-wrapper .moon 
                     {
-                        background: url(moon-white.svg) no-repeat center;
+                        background: url(images/moon-white.svg) no-repeat center;
                         background-size: 100%;
                     }
 
@@ -185,7 +205,7 @@ body.night .switch-wrapper .moon, html.night .switch-wrapper .moon
 
 .intro
     {
-        padding: 120px 100px;
+        padding: 80px 100px;
         height: 75vh;
         display: -webkit-box;
         display: -ms-flexbox;
@@ -206,7 +226,7 @@ body.night .switch-wrapper .moon, html.night .switch-wrapper .moon
     
 }
 .intro_hello, .intro_tagline {
-    font-size: 2.5rem;
+    font-size: 2.1rem;
 }
 
 .intro_hello .wave-hand.animated{
@@ -220,7 +240,7 @@ body.night .switch-wrapper .moon, html.night .switch-wrapper .moon
 }
 
 .intro_hello .wave-hand{
-    background-image: url(waving-hand.png);
+    background-image: url(images/waving-hand.png);
     margin-left: 10px;
     cursor: pointer;
     position: relative;
@@ -237,13 +257,12 @@ body.night .switch-wrapper .moon, html.night .switch-wrapper .moon
     
 }
 
-
 .intro__tagline .name{
     font-weight: 700;
 }
 
 .intro_tagline .technologist{
-    background-image: url(male-technologist.png);
+    background-image: url(images/male-technologist.png);
 }
 
 .intro_tagline .emoji{
@@ -257,7 +276,7 @@ body.night .switch-wrapper .moon, html.night .switch-wrapper .moon
 }
 
 .intro_contact .emoji.pointer {
-    background-image: url(right-pointing.png);
+    background-image: url(images/right-pointing.png);
     width: 30px;
     height: 30px;
     margin: 0 5px;
@@ -279,15 +298,44 @@ body.night .switch-wrapper .moon, html.night .switch-wrapper .moon
     color: #fff;
 }
 
-.intro #downbutton img{
+/*.intro #downbutton img{
     height: 45px;
     width: 45px;
     margin-top: 80px;
     display: block;
     margin-left: auto;
     margin-right: auto;
+}*/
+
+section {
+    position: relative;
 }
 
+/*.fixed-side-nav {
+  position:fixed; 
+  padding: 10px;
+  height:50%; 
+  width:2%; 
+  opacity: 0.8;
+  margin-top: 20%;
+  color: lightgray;
+  right: 0;
+}
+
+.fixed-side-nav li{
+    text-align: center;
+    margin-top: 10%;
+    text-decoration: none;
+}
+
+.fixed-side-nav li a{
+font-size: 20px;
+}
+
+.fixed-side-nav li a:hover{
+font-size: 40px;
+}
+*/
 .status {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -532,7 +580,7 @@ section .skills{
     background: 0 0;
 }
 
-.resume, .ship{
+/*.resume, .ship{
     width: 45%;
     margin-bottom: 100px;
 }
@@ -542,7 +590,7 @@ section .skills{
 }
 .ship{
     float: right;
-}
+}*/
 
 body .arrow-link, html .arrow-link {
     font-weight: 700;
@@ -557,7 +605,7 @@ body .arrow-link:after, html .arrow-link:after {
     bottom: 2px;
     margin-left: 15px;
     content: "";
-    background: url(arrow.png) no-repeat center;
+    background: url(images/arrow.png) no-repeat center;
     background-size: 100%;
     width: 15px;
     height: 15px;
@@ -579,6 +627,10 @@ body ul, html ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /*position: fixed;*/
+    top: 730px;
+    bottom: 0px;
+    left: 0px;right: 0px;
 }
 
 .footer_copyright {
@@ -618,7 +670,7 @@ body #top-button, html #top-button {
     background: 0 0;
     border: none;
     outline: 0;
-    width: 40px;
+    width: 55px;
     position: fixed;
     bottom: 25px;
     right: 10px;
@@ -633,7 +685,7 @@ body #top-button img, html #top-button img {
     scroll-behavior: smooth;
 }
 
- .other-projects {
+ /*.other-projects {
     visibility: visible;  
     -webkit-transform:translateY(0) scale(1); 
     opacity: 1;
@@ -648,7 +700,7 @@ body #top-button img, html #top-button img {
     opacity 0.6s 
     cubic-bezier(.694,0,.335,1) 0s; 
 }
-
+*/
 
 .other-projects .project {
     max-width: 600px;
@@ -742,6 +794,7 @@ body.night .experience .job_time, body.night .footer_copyright, body.night .intr
             padding: 130px 45px;
             
         }
+
 }
 
 
@@ -758,12 +811,6 @@ body.night .experience .job_time, body.night .footer_copyright, body.night .intr
             line-height: 1.5;
         }
 
-    .intro #downbutton img
-    {
-        height: 25px;
-        width: 25px;
-        margin-top: 100px;
-    }
     body section, html section 
         {
             padding: 80px 55px;
@@ -811,6 +858,22 @@ body.night .experience .job_time, body.night .footer_copyright, body.night .intr
     {
         font-size: 1rem;
     }
+    .switch-wrapper a, body.night .switch-wrapper a 
+    {
+        margin: 2px;
+        font-size: 8px;
+    }
+     .intro #downbutton img
+    {
+        height: 25px;
+        width: 25px;
+    }
+    .fixed-side-nav {
+         margin-top: 50%;
+    }
+    .skills{
+        margin-top: 100px;
+    }
 }
 
 @media screen and (max-width: 630px)
@@ -826,6 +889,9 @@ body.night .experience .job_time, body.night .footer_copyright, body.night .intr
         width: 47%;
         margin-right: 5px;
         margin-bottom: 25px;  
+    }
+    .background .section_content .status_message{
+        margin: auto;
     }
     .footer 
     {
@@ -878,6 +944,11 @@ body.night .experience .job_time, body.night .footer_copyright, body.night .intr
         margin-top: 25px;
         margin-left: 0;
     }
+    .switch-wrapper a, body.night .switch-wrapper a 
+    {
+        margin: 5px;
+        font-size: 8px;
+    }
 }
 
 @media screen and (max-width: 850px)
@@ -906,12 +977,7 @@ body.night .experience .job_time, body.night .footer_copyright, body.night .intr
     {
         margin-right: 50px;
     }
-    .intro #downbutton img
-    {
-        height: 65px;
-        width: 65px;
-        margin-top: 100px;
-    }
+
     .featured-projects .project 
     {
         width: 105%;
