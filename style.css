@@ -4,9 +4,10 @@ body, html
             padding: 0;
             background-color: #fff;*/
             color: #444452;
-            font-family: Apercu,Source Sans Pro,Helvetica,Arial,sans-serif;
+            /*font-family: Apercu,Source Sans Pro,Helvetica,Arial,sans-serif;*/
             line-height: 1.5;
             scroll-behavior: smooth;
+            font-family: 'Share Tech Mono', monospace;
         }
 
 
@@ -73,6 +74,8 @@ body .emoji, html .emoji {
 
 section{
     opacity: 0;
+    /*word-spacing: 2px;*/
+    letter-spacing: 1px;
 }
 
 section.fadeIn{
@@ -210,9 +213,134 @@ body.night .switch-wrapper .moon, html.night .switch-wrapper .moon
     font-weight: bold;
 }
 
-.name{
-    font-weight: bold;
+.myname{
+    /*position: relative;*/
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  /*font-size: 10vw;*/
+  /*font-weight: 900;*/
+  text-decoration: none;
+  /*color: white;*/
+  /*display: inline-block;*/
+  /*background-size: 120% 100%;*/
+  text-fill-color: transparent;
+  display: inline-block;
+  /*background: linear-gradient(to right, #30CFD0 0%, #330867 100%);*/
+  -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(45deg, 
+                    #7794ff, 
+                    #44107A,
+                    #FF1361,
+                    #FFF800);
+
+  animation: .8s shake infinite alternate;
 }
+
+@keyframes shake {
+  0% { transform: skewX(-15deg); }
+  5% { transform: skewX(15deg); }
+  10% { transform: skewX(-15deg); }
+  15% { transform: skewX(15deg); }
+  20% { transform: skewX(0deg); }
+  100% { transform: skewX(0deg); }  
+}
+
+
+.name{
+    font-weight: bolder;
+}
+
+
+.content{
+    
+    position: absolute;
+    top: 37%;
+    /*left: 50%;*/
+    /*transform: translate(-50%, -50%);*/
+    height: 460px;
+    overflow:hidden;
+  
+  /*font-family: 'Lato', sans-serif;*/
+  font-size: 30px;
+  line-height: 50px;
+  color: #FFCB04;
+}
+.content .container{
+    font-weight: 600;
+    overflow: hidden;
+    height: 40px;
+    padding: 0 40px;
+}
+
+.container:before {
+      content: '[';
+      left: 0;
+    }
+
+.container:after {
+      content: ']';
+      position: absolute;
+      right: 0;
+    }
+
+.container:after, .container:before {
+    position: absolute;
+    top: 0;
+    color: #16a085;
+      font-size: 40px;
+      line-height: 50px;
+    animation-name: opacity1;
+    animation-duration: 2s;
+    animation-iteration-count: forwards;
+}
+
+.text {
+      display: inline-flex;
+      float: right;
+      /*margin: 150px;*/
+    }
+
+.list{
+    margin-top: 0;
+      /*padding-left: 110px;*/
+      text-align: left;
+      line-height:40px;
+    list-style: none;
+     animation-name: change;
+      animation-duration: 10s;
+      animation-iteration-count: forwards;
+}
+
+.item{
+     line-height:40px;
+        margin:0;
+}
+
+
+@keyframes opacity1 {
+  0%, 100% {opacity:0;}
+  50% {opacity:1;}
+}
+
+@keyframes change {
+  0%, 12.66%, 100% {transform:translate3d(0,0,0);}
+  16.66%, 29.32% {transform:translate3d(0,-25%,0);}
+  33.32%,45.98% {transform:translate3d(0,-50%,0);}
+  49.98%,62.64% {transform:translate3d(0,-75%,0);}
+  66.64%,79.3% {transform:translate3d(0,-50%,0);}
+  83.3%,95.96% {transform:translate3d(0,-25%,0);}
+}
+
+
+
+
+
+
+
+
+
+
 
 .animate span:nth-of-type(2) {
     animation-delay: .05s;
@@ -272,6 +400,16 @@ body.night .switch-wrapper .moon, html.night .switch-wrapper .moon
     animation-delay: .95s;
 }
 
+.animate {
+    font-size: 2rem;
+    margin: 100px 0 0;
+    /*border-bottom: 2px solid #ccc;*/
+}
+
+.animate span {
+    display: inline-block;
+}
+
 .one span {
     /*color: #24a8e6;*/
     opacity: 0;
@@ -289,6 +427,7 @@ body.night .switch-wrapper .moon, html.night .switch-wrapper .moon
         opacity: 1;
     }
 }
+
 
 .intro
     {
