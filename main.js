@@ -139,7 +139,7 @@ window.addEventListener("scroll",function(e){
     section2.classList.add("fadeIn")
   }
 
-  if(window.scrollY > 1800){
+  if(window.scrollY > 1200){
     section2.classList.remove("fadeIn")
   }
 

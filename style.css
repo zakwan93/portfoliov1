@@ -75,7 +75,8 @@ body .emoji, html .emoji {
 section{
     opacity: 0;
     /*word-spacing: 2px;*/
-    letter-spacing: 1px;
+    /*letter-spacing: 1px;*/
+    
 }
 
 section.fadeIn{
@@ -226,15 +227,15 @@ body.night .switch-wrapper .moon, html.night .switch-wrapper .moon
   text-fill-color: transparent;
   display: inline-block;
   /*background: linear-gradient(to right, #30CFD0 0%, #330867 100%);*/
-  -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  background-image: linear-gradient(45deg, 
+/*  -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;*/
+  /*background-image: linear-gradient(45deg, 
                     #7794ff, 
                     #44107A,
                     #FF1361,
-                    #FFF800);
-
-  animation: .8s shake infinite alternate;
+                    #FFF800);*/
+    /*background-image: linear-gradient(to right, #30CFD0 0%, #330867 100%);*/
+    animation: .8s shake infinite alternate;
 }
 
 @keyframes shake {
@@ -269,8 +270,9 @@ body.night .switch-wrapper .moon, html.night .switch-wrapper .moon
 .content .container{
     font-weight: 600;
     overflow: hidden;
-    height: 40px;
-    padding: 0 40px;
+    height: 50px;
+    padding: 0px 40px;
+    width: 100%;
 }
 
 .container:before {
@@ -286,35 +288,37 @@ body.night .switch-wrapper .moon, html.night .switch-wrapper .moon
 
 .container:after, .container:before {
     position: absolute;
-    top: 0;
-    color: #16a085;
-      font-size: 40px;
-      line-height: 50px;
+    top: 0px;
+    color: #007bff;
+      font-size: 50px;
+      /*line-height: 50px;*/
     animation-name: opacity1;
     animation-duration: 2s;
-    animation-iteration-count: forwards;
+    animation-iteration-count: infinite;
 }
 
-.text {
-      display: inline-flex;
+/*.text {
+      display: inline;
       float: right;
-      /*margin: 150px;*/
-    }
+      margin-top: -10%;
+      margin-left: 5%;
+    }*/
 
 .list{
-    margin-top: 0;
+    margin-top: 0px;
+    margin-bottom: 60px;
       /*padding-left: 110px;*/
       text-align: left;
-      line-height:40px;
+      line-height:80px;
     list-style: none;
      animation-name: change;
       animation-duration: 10s;
-      animation-iteration-count: forwards;
+      animation-iteration-count: infinite;
 }
 
 .item{
-     line-height:40px;
-        margin:0;
+     line-height: 50px;
+        margin-bottom: 0px;
 }
 
 
@@ -325,20 +329,12 @@ body.night .switch-wrapper .moon, html.night .switch-wrapper .moon
 
 @keyframes change {
   0%, 12.66%, 100% {transform:translate3d(0,0,0);}
-  16.66%, 29.32% {transform:translate3d(0,-25%,0);}
-  33.32%,45.98% {transform:translate3d(0,-50%,0);}
-  49.98%,62.64% {transform:translate3d(0,-75%,0);}
-  66.64%,79.3% {transform:translate3d(0,-50%,0);}
-  83.3%,95.96% {transform:translate3d(0,-25%,0);}
+  16.66%, 29.32% {transform:translate3d(0,-35%,0);}
+  33.32%,45.98% {transform:translate3d(0,-68%,0);}
+  49.98%,62.64% {transform:translate3d(0,-70%,0);}
+  66.64%,79.3% {transform:translate3d(0,-37%,0);}
+  83.3%,95.96% {transform:translate3d(0,-0%,0);}
 }
-
-
-
-
-
-
-
-
 
 
 
