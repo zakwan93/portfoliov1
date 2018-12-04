@@ -877,8 +877,7 @@ body.night .experience .job_time, body.night .footer_copyright, body.night .intr
     }
 
      .content {
-        /*position: absolute;*/
-      top: 37.5%;
+      top: 41.5%;
       left: 5%;
       font-size: 1.5rem;
     }
