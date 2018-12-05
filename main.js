@@ -63,46 +63,47 @@ var section5 = sections[4];
 
 
 window.addEventListener("scroll",function(){
-  if(window.scrollY > 200 ){
+  if(window.pageYOffset > 200 ){
     section1.classList.add("fadeIn")
   }
 
-  if(window.scrollY > 1250){
+  if(window.pageYOffset > 1250){
     section1.classList.remove("fadeIn")
   }
 
-  if(window.scrollY > 900 ){
+  if(window.pageYOffset > 900 ){
     section2.classList.add("fadeIn")
   }
 
-  if(window.scrollY > 1800){
+  if(window.pageYOffset > 1800){
     section2.classList.remove("fadeIn")
   }
 
-  if (window.scrollY > 1450 ){
+  if (window.pageYOffset > 1450 ){
     section3.classList.add("fadeIn")
   }
 
-  if (window.scrollY > 2600 ){
+  if (window.pageYOffset > 2600 ){
     section3.classList.remove("fadeIn")
   }
 
-  if (window.scrollY > 2450){
+  if (window.pageYOffset > 2450){
     section4.classList.add("fadeIn")
   }
 
-  if (window.scrollY > 3500){
+  if (window.pageYOffset > 3500){
     section4.classList.remove("fadeIn")
   }
 
-  if (window.scrollY > 3150 ){
+  if (window.pageYOffset > 3150 ){
     section5.classList.add("fadeIn")
   }
 
-  if (window.scrollY > 4000 ){
+  if (window.pageYOffset > 4000 ){
     section5.classList.remove("fadeIn")
   }
 })
+
 
 
 
