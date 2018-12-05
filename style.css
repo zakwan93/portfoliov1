@@ -841,6 +841,7 @@ body.night .experience .job_time, body.night .footer_copyright, body.night .intr
   83.3%,95.96% {transform:translate3d(0,-0%,0);}
 }
 
+
 /*All Media Queries*/
 
 @media screen and (max-width: 320px)
