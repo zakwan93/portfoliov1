@@ -54,55 +54,55 @@ $('.project_used span').on({
 
 
 // Body will add and remove Fade-In animation after scrolling to Y axis at some point
-var sections = document.getElementsByTagName("section");
-var section1 = sections[0];
-var section2 = sections[1];
-var section3 = sections[2];
-var section4 = sections[3];
-var section5 = sections[4];
+// var sections = document.getElementsByTagName("section");
+// var section1 = sections[0];
+// var section2 = sections[1];
+// var section3 = sections[2];
+// var section4 = sections[3];
+// var section5 = sections[4];
 
 
-window.addEventListener("scroll",function(){
-  if(window.pageYOffset > 200 ){
-    section1.classList.add("fadeIn")
-  }
+// window.addEventListener("scroll",function(){
+//   if(window.pageYOffset > 200 ){
+//     section1.classList.add("fadeIn")
+//   }
 
-  if(window.pageYOffset > 1250){
-    section1.classList.remove("fadeIn")
-  }
+//   if(window.pageYOffset > 1250){
+//     section1.classList.remove("fadeIn")
+//   }
 
-  if(window.pageYOffset > 900 ){
-    section2.classList.add("fadeIn")
-  }
+//   if(window.pageYOffset > 900 ){
+//     section2.classList.add("fadeIn")
+//   }
 
-  if(window.pageYOffset > 1800){
-    section2.classList.remove("fadeIn")
-  }
+//   if(window.pageYOffset > 1800){
+//     section2.classList.remove("fadeIn")
+//   }
 
-  if (window.pageYOffset > 1450 ){
-    section3.classList.add("fadeIn")
-  }
+//   if (window.pageYOffset > 1450 ){
+//     section3.classList.add("fadeIn")
+//   }
 
-  if (window.pageYOffset > 2600 ){
-    section3.classList.remove("fadeIn")
-  }
+//   if (window.pageYOffset > 2600 ){
+//     section3.classList.remove("fadeIn")
+//   }
 
-  if (window.pageYOffset > 2450){
-    section4.classList.add("fadeIn")
-  }
+//   if (window.pageYOffset > 2450){
+//     section4.classList.add("fadeIn")
+//   }
 
-  if (window.pageYOffset > 3500){
-    section4.classList.remove("fadeIn")
-  }
+//   if (window.pageYOffset > 3500){
+//     section4.classList.remove("fadeIn")
+//   }
 
-  if (window.pageYOffset > 3150 ){
-    section5.classList.add("fadeIn")
-  }
+//   if (window.pageYOffset > 3150 ){
+//     section5.classList.add("fadeIn")
+//   }
 
-  if (window.pageYOffset > 4000 ){
-    section5.classList.remove("fadeIn")
-  }
-})
+//   if (window.pageYOffset > 4000 ){
+//     section5.classList.remove("fadeIn")
+//   }
+// })
 
 
 
