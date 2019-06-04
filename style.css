@@ -71,7 +71,7 @@ body .emoji, html .emoji {
 }
 
 section{
-    opacity: 0;
+    /*opacity: 1;*/
     /*word-spacing: 2px;*/
     /*letter-spacing: 1px;*/   
 }
